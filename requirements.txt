@@ -10,7 +10,6 @@ pydantic>=2.0.0
 numpy>=1.24.0
 pandas>=2.0.0
 torch==2.1.2
-torchvision==0.16.2
-torchaudio==2.1.2
+# torchvision and torchaudio removed as they might not be strictly necessary and can cause installation issues
 # Add other specific versions as needed, for example:
 # transformers==4.30.0 
