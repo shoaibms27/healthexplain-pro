@@ -21,7 +21,7 @@ class VectorStore:
         Args:
             model_name: Name of the sentence transformer model to use
         """
-        self.model = SentenceTransformer(model_name)
+        self.model = SentenceTransformer(model_name, device='cpu')
         self.dimension = self.model.get_sentence_embedding_dimension()
         self.index = faiss.IndexFlatIP(self.dimension)  # Inner product for cosine similarity
         self.documents: List[Document] = []
